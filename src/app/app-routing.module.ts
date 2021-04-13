@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-
-import { LayoutComponent } from './layout/layout.component';
-
+import { Component, NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './contact/components/contact/contact.component';
+import { LayoutComponent } from './layout/layout.component'
 import { AdminGuard } from './admin.guard';
-
 const routes: Routes = [
+
+
   {
     path: '',
     component: LayoutComponent,
@@ -13,45 +13,38 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: '/home',
-        pathMatch: 'full',
+        pathMatch: 'full'
       },
       {
         path: 'home',
+        // component: HomeComponent
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'products',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
       {
         path: 'contact',
-        canActivate: [AdminGuard],
-        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+        component: ContactComponent,
+        // canActivate: [AdminGuard]
       },
-      {
-        path: 'order',
-        loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
-      },
-      {
-        path: 'demo',
-        canActivate: [AdminGuard],
-        loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
-      },
+
+
     ]
+
   },
+
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
-  },
-  {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
-  },
+
+  }
+
 ];
 
 @NgModule({
@@ -61,3 +54,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

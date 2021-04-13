@@ -1,10 +1,13 @@
 .full-width {
   width: 100%;
+  
 }
 
 .shipping-card {
   min-width: 120px;
   margin: 20px auto;
+  background-color: black;
+  color: #f5f5f7;
 }
 
 .mat-radio-button {
@@ -15,11 +18,15 @@
 .row {
   display: flex;
   flex-direction: row;
+  background-color:#f5f5f7;
+  color: black;
 }
 
 .col {
   flex: 1;
   margin-right: 20px;
+  background-color:#f5f5f7;
+  color: black;
 }
 
 .col:last-child {

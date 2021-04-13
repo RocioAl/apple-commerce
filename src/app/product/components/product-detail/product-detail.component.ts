@@ -28,41 +28,35 @@ export class ProductDetailComponent implements OnInit {
 
   fetchProduct(id: string) {
     this.productsService.getProduct(id)
-    .subscribe(product => {
-      this.product = product;
-    });
+      .subscribe(product => {
+        this.product = product;
+      });
   }
 
   createProduct() {
     const newProduct: Product = {
-      id: '222',
-      title: 'nuevo desde angular',
-      image: 'assets/images/banner-1.jpg',
-      price: 3000,
-      description: 'nuevo producto'
+      id: '4',
+      title: 'M1',
+      image: 'assets/images/M1.png',
+      price: 505.79,
+      description: 'Ya llegó el primer chip diseñado específicamente para la Mac. El sistema en chip (SoC) M1 de Apple tiene 16,000 millones de transistores e integra CPU, GPU, Neural Engine, E/S y mucho más en un diminuto chip. Por eso, te brinda un rendimiento increíble, tecnologías exclusivas y una eficiencia energética líder en la industria.1 El chip M1 es más que un paso adelante: es la entrada al futuro de la Mac.',
+      sentence: 'Un chip pequeño. Un avance enorme.'
     };
     this.productsService.createProduct(newProduct)
-    .subscribe(product => {
-      console.log(product);
-    });
+      .subscribe(product => {
+        console.log(product);
+      });
   }
-
   updateProduct() {
     const updateProduct: Partial<Product> = {
       price: 555555,
       description: 'edicion titulo'
     };
     this.productsService.updateProduct('2', updateProduct)
-    .subscribe(product => {
-      console.log(product);
-    });
+      .subscribe(product => {
+        console.log(product);
+      });
   }
 
-  deleteProduct() {
-    this.productsService.deleteProduct('222')
-    .subscribe(rta => {
-      console.log(rta);
-    });
-  }
 
 }

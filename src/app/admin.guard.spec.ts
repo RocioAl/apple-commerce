@@ -1,15 +1,16 @@
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { AdminGuard } from './admin.guard';
 
 describe('AdminGuard', () => {
+  let guard: AdminGuard;
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [AdminGuard]
-    });
+    TestBed.configureTestingModule({});
+    guard = TestBed.inject(AdminGuard);
   });
 
-  it('should ...', inject([AdminGuard], (guard: AdminGuard) => {
+  it('should be created', () => {
     expect(guard).toBeTruthy();
-  }));
+  });
 });
