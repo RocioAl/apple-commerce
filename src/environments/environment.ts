@@ -8,8 +8,6 @@ export const environment = {
   url_api: 'https://apiapple.herokuapp.com'
 
 
-
-
 };
 
 /*

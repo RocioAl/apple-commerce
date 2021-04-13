@@ -1,19 +1,12 @@
 <div *ngIf="product">
-  <div class="product-grid">
-    <mat-card>
-      <div class="crop-image">
-        <img [src]="product.image" alt="">
-      </div>
-      <mat-card-header>
-        <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
-        <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content class="card-container">
-        <p>{{ product.description }}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <!-- <button (click)="createProduct()" mat-raised-button color="primary">Crear producto</button>
-              <button (click)="updateProduct()" mat-raised-button color="primary">Actualizar producto</button> -->
-      </mat-card-actions>
-    </mat-card>
+  <div>
+    <img [src]="product.image" alt="">
   </div>
+  <div>
+    <ul>
+      <li>Nombre: {{ product.title }}</li>
+      <li>Precio: {{ product.price | currency }}</li>
+    </ul>
+    <p>{{ product.description }}</p>
+  </div>
+</div>
