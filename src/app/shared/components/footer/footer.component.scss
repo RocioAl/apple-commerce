@@ -1,17 +1,15 @@
-@import '~@angular/material/theming';
 
-$primary: mat-palette($mat-indigo);
 
 footer {
   padding: 50px 0px;
   margin-top: 20px;
-  background-color: mat-color($primary);
+  background-color: #f5f5f7;
   .box {
     h3 {
-      color: white;
+      color: #3d3d42;
     }
     input{
-      color: white;
+      color: black;
     }
     ul {
       list-style: none;
@@ -21,7 +19,7 @@ footer {
         margin: 10px 0px;
         a {
           text-decoration: none;
-          color: white;
+          color: black;
         }
       }
     }

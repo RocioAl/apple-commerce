@@ -1,0 +1,32 @@
+.crop-image{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  mat-card{
+      background-color: black;
+      color:#f5f5f7;
+  }
+  mat-card-subtitle{
+    color:#f56300;
+
+  }
+  .card-container {
+  
+    background: black;
+    padding: 10px;
+    color: white;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  
