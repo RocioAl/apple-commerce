@@ -47,7 +47,7 @@ export class ProductDetailComponent implements OnInit {
         console.log(product);
       });
   }
-  updateProduct() {
+  updateProduct(id: string) {
     const updateProduct: Partial<Product> = {
       price: 555555,
       description: 'edicion titulo'
